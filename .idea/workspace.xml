@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="370db42e-1061-43b8-893f-0b2d83c0a155" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Participant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Participant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Participant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +48,12 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "joyce",
+    "git-widget-placeholder": "mills",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/joycehan/PycharmProjects/CS_Project",
+    "last_opened_file_path": "/Users/gracemills/Desktop/CSC-101/cs_project",
     "to.speed.mode.migration.done": "true"
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,6 +69,19 @@
       <option name="presentableId" value="Default" />
       <updated>1763418785704</updated>
     </task>
+    <task id="LOCAL-00001" summary="added files">
+      <option name="closed" value="true" />
+      <created>1763440252061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763440252061</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added files" />
   </component>
 </project>
