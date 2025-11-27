@@ -36,8 +36,6 @@ class Participants:
                 self.name == other.name)
 
 
-def overall_score(self):
-    return self.depression_index - self.mood_index - self.productivity_index
 def parse_screen_time(raw):
     raw = raw.lower()
     raw = raw.replace("hours", "")
@@ -54,6 +52,7 @@ def parse_screen_time(raw):
         return 0.0
 
     return float(number_str)
+
 def calculate_depression(values):
     total = 0
     i = 0
