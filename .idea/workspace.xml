@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec6c50a-9c12-49f4-b0bc-a659fa086a9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/persons.py" afterDir="false" />
+    <list default="true" id="aec6c50a-9c12-49f4-b0bc-a659fa086a9b" name="Changes" comment="slight asthetics tweak">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Participant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen_Time_Inputs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Screen_Time_Inputs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +17,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;joyce&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "git-widget-placeholder": "joyce"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cs_project" />
@@ -54,6 +53,28 @@
     </recent_temporary>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="debugging printing persons">
+      <option name="closed" value="true" />
+      <created>1764356314680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764356314680</updated>
+    </task>
+    <task id="LOCAL-00002" summary="slight asthetics tweak">
+      <option name="closed" value="true" />
+      <created>1764356454928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764356454928</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="debugging printing persons" />
+    <MESSAGE value="slight asthetics tweak" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight asthetics tweak" />
   </component>
 </project>
