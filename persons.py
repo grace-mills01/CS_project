@@ -18,7 +18,7 @@ class Participant:
         self.depression_index = depression_index
 
     def __repr__(self):
-        return ("The participants name is {} and id is {} with the following stats: screen time: {}, depression index: {}, "
+        return ("The participants name is {} and id is {} with the following stats: screen time: {}, depression index: {}"
                 .format(self.name, self.id, self.screen_time, self.depression_index))
 
     def __eq__(self, other):
