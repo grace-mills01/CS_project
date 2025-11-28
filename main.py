@@ -33,7 +33,7 @@ def sort_by_screen_time(participants):
     while i < n-1:
         j = 0
         while j < n-1-i:
-            if participants[j].screentime > participants[j + 1].screen_time:
+            if participants[j].screen_time > participants[j + 1].screen_time:
                 temp = participants[j]
                 participants[j] = participants [j+1]
                 participants[j + 1] = temp
@@ -57,13 +57,13 @@ def sort_by_depression_score(participants):
 
 def percentages_per_screenTime(dict_st):
     result = {"Screen time 0-2 hours":[["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]],
-            "Screen time 2-4 hours": [["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]],
-            "Screen time 4-6 hours": [["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]],
+            "Screen time 3-4 hours": [["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]],
+            "Screen time 5-6 hours": [["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]],
             "Screen time 6+ hours": [["0-4", 0], ["5-9", 0], ["10-14", 0], ["15-19", 0], ["20-27", 0]]}
 
     total_per_st = {"Screen time 0-2 hours": len(dict_st["Screen time 0-2 hours"]),
-            "Screen time 2-4 hours": len(dict_st["Screen time 2-4 hours"]),
-            "Screen time 4-6 hours": len(dict_st["Screen time 4-6 hours"]),
+            "Screen time 3-4 hours": len(dict_st["Screen time 3-4 hours"]),
+            "Screen time 5-6 hours": len(dict_st["Screen time 5-6 hours"]),
             "Screen time 6+ hours": len(dict_st["Screen time 6+ hours"])}
 
 
@@ -71,9 +71,9 @@ def percentages_per_screenTime(dict_st):
         if x == 0 :
             key = "Screen time 0-2 hours"
         elif x == 1:
-            key = "Screen time 2-4 hours"
+            key = "Screen time 3-4 hours"
         elif x == 2:
-            key = "Screen time 4-6 hours"
+            key = "Screen time 5-6 hours"
         elif x == 3:
             key = "Screen time 6+ hours"
 
@@ -96,17 +96,17 @@ def percentages_per_screenTime(dict_st):
                  result["Screen time 0-2 hours"][3][1] / total_per_st["Screen time 0-2 hours"],
                  result["Screen time 0-2 hours"][4][1] / total_per_st["Screen time 0-2 hours"]]
 
-    totals_24 = [result["Screen time 2-4 hours"][0][1] / total_per_st["Screen time 2-4 hours"],
-                 result["Screen time 2-4 hours"][1][1] / total_per_st["Screen time 2-4 hours"],
-                 result["Screen time 2-4 hours"][2][1] / total_per_st["Screen time 2-4 hours"],
-                 result["Screen time 2-4 hours"][3][1] / total_per_st["Screen time 2-4 hours"],
-                 result["Screen time 2-4 hours"][4][1] / total_per_st["Screen time 2-4 hours"]]
+    totals_34 = [result["Screen time 3-4 hours"][0][1] / total_per_st["Screen time 3-4 hours"],
+                 result["Screen time 3-4 hours"][1][1] / total_per_st["Screen time 3-4 hours"],
+                 result["Screen time 3-4 hours"][2][1] / total_per_st["Screen time 3-4 hours"],
+                 result["Screen time 3-4 hours"][3][1] / total_per_st["Screen time 3-4 hours"],
+                 result["Screen time 3-4 hours"][4][1] / total_per_st["Screen time 3-4 hours"]]
 
-    totals_46 = [result["Screen time 4-6 hours"][0][1] / total_per_st["Screen time 4-6 hours"],
-                result["Screen time 4-6 hours"][1][1] / total_per_st["Screen time 4-6 hours"],
-                result["Screen time 4-6 hours"][2][1] / total_per_st["Screen time 4-6 hours"],
-                result["Screen time 4-6 hours"][3][1] / total_per_st["Screen time 4-6 hours"],
-                result["Screen time 4-6 hours"][4][1] / total_per_st["Screen time 4-6 hours"]]
+    totals_56 = [result["Screen time 5-6 hours"][0][1] / total_per_st["Screen time 5-6 hours"],
+                result["Screen time 5-6 hours"][1][1] / total_per_st["Screen time 5-6 hours"],
+                result["Screen time 5-6 hours"][2][1] / total_per_st["Screen time 5-6 hours"],
+                result["Screen time 5-6 hours"][3][1] / total_per_st["Screen time 5-6 hours"],
+                result["Screen time 5-6 hours"][4][1] / total_per_st["Screen time 5-6 hours"]]
 
     totals_6 = [result["Screen time 6+ hours"][0][1] / total_per_st["Screen time 6+ hours"],
                 result["Screen time 6+ hours"][1][1] / total_per_st["Screen time 6+ hours"],
@@ -119,16 +119,16 @@ def percentages_per_screenTime(dict_st):
                                                 totals_02[2]*100,
                                                 totals_02[3]*100,
                                                 totals_02[4]*100],
-            "Screen time 2-4 hours": [totals_24[0]*100,
-                                    totals_24[1]*100,
-                                    totals_24[2]*100,
-                                    totals_24[3]*100,
-                                    totals_24[4]*100],
-            "Screen time 4-6 hours": [totals_46[0]*100,
-                                    totals_46[1]*100,
-                                    totals_46[2]*100,
-                                    totals_46[3]*100,
-                                    totals_46[4]*100],
+            "Screen time 3-4 hours": [totals_34[0]*100,
+                                    totals_34[1]*100,
+                                    totals_34[2]*100,
+                                    totals_34[3]*100,
+                                    totals_34[4]*100],
+            "Screen time 5-6 hours": [totals_56[0]*100,
+                                    totals_56[1]*100,
+                                    totals_56[2]*100,
+                                    totals_56[3]*100,
+                                    totals_56[4]*100],
             "Screen time 6+ hours": [totals_6[0]*100,
                                     totals_6[1]*100,
                                     totals_6[2]*100,
@@ -139,8 +139,8 @@ def percentages_per_screenTime(dict_st):
 
 def main():
     dict_participants_screen_time = {"Screen time 0-2 hours": [],
-                                     "Screen time 2-4 hours": [],
-                                     "Screen time 4-6 hours": [],
+                                     "Screen time 3-4 hours": [],
+                                     "Screen time 5-6 hours": [],
                                      "Screen time 6+ hours": [],}
     dict_participants_depression_index = {"Index of 0-4 (None-minimal)": [],
                                           "Index of 5-9 (Mild)": [],
@@ -153,12 +153,12 @@ def main():
     for person in participants:
         screen_time = person.screen_time
 
-        if screen_time > 0 and screen_time <= 2:
+        if screen_time >= 0 and screen_time <= 2:
             dict_participants_screen_time["Screen time 0-2 hours"].append(person)
         elif screen_time > 2 and screen_time <= 4:
-            dict_participants_screen_time["Screen time 2-4 hours"].append(person)
+            dict_participants_screen_time["Screen time 3-4 hours"].append(person)
         elif screen_time > 4 and screen_time <= 6:
-            dict_participants_screen_time["Screen time 4-6 hours"].append(person)
+            dict_participants_screen_time["Screen time 5-6 hours"].append(person)
         elif screen_time > 6:
             dict_participants_screen_time["Screen time 6+ hours"].append(person)
 
@@ -182,37 +182,52 @@ def main():
 
     #percentage output
     percents = percentages_per_screenTime(dict_participants_screen_time)
+    #counts how many people in each screen time group
+    counts = count_screen_time_groups(dict_participants_screen_time)
 
-    print ("Screen time 0-2 hours:","\n",
+    print("\nNumber of participants by screen time:")
+    print("0–2 hours:", counts["Screen time 0-2 hours"])
+    print("3–4 hours:", counts["Screen time 3-4 hours"])
+    print("5–6 hours:", counts["Screen time 5-6 hours"])
+    print("6+ hours:", counts["Screen time 6+ hours"])
+
+    print ("\nScreen time 0-2 hours:","\n",
            "Percent at 0-4 depression index", percents["Screen time 0-2 hours"][0], "\n"
            "Percent at 5-9 depression index", percents["Screen time 0-2 hours"][1], "\n"
            "Percent at 10-14 depression index", percents["Screen time 0-2 hours"][2], "\n"
            "Percent at 15-19 depression index", percents["Screen time 0-2 hours"][3], "\n"
            "Percent at 20-27 depression index", percents["Screen time 0-2 hours"][4])
 
-    print("Screen time 2-4 hours:", "\n",
-        "Percent at 0-4 depression index", percents["Screen time 2-4 hours"][0], "\n"
-        "Percent at 5-9 depression index",percents["Screen time 2-4 hours"][1], "\n"
-        "Percent at 10-14 depression index", percents["Screen time 2-4 hours"][2], "\n"
-        "Percent at 15-19 depression index", percents["Screen time 2-4 hours"][3], "\n"
-        "Percent at 20-27 depression index",percents["Screen time 2-4 hours"][4])
+    print("Screen time 3-4 hours:", "\n",
+        "Percent at 0-4 depression index", percents["Screen time 3-4 hours"][0], "\n"
+        "Percent at 5-9 depression index",percents["Screen time 3-4 hours"][1], "\n"
+        "Percent at 10-14 depression index", percents["Screen time 3-4 hours"][2], "\n"
+        "Percent at 15-19 depression index", percents["Screen time 3-4 hours"][3], "\n"
+        "Percent at 20-27 depression index",percents["Screen time 3-4 hours"][4])
 
-    print("Screen time 4-6 hours:", "\n",
-        "Percent at 0-4 depression index", percents["Screen time 4-6 hours"][0], "\n"
-        "Percent at 5-9 depression index",percents["Screen time 4-6 hours"][1], "\n"
-        "Percent at 10-14 depression index",percents["Screen time 4-6 hours"][2], "\n"
-        "Percent at 15-19 depression index",percents["Screen time 4-6 hours"][3], "\n"
-        "Percent at 20-27 depression index", percents["Screen time 4-6 hours"][4])
+    print("Screen time 5-6 hours:", "\n",
+        "Percent at 0-4 depression index", percents["Screen time 5-6 hours"][0], "\n"
+        "Percent at 5-9 depression index",percents["Screen time 5-6 hours"][1], "\n"
+        "Percent at 10-14 depression index",percents["Screen time 5-6 hours"][2], "\n"
+        "Percent at 15-19 depression index",percents["Screen time 5-6 hours"][3], "\n"
+        "Percent at 20-27 depression index", percents["Screen time 5-6 hours"][4])
 
-    print("Screen time 4-6 hours:", "\n",
-        "Percent at 0-4 depression index", percents["Screen time 4-6 hours"][0], "\n"
-        "Percent at 5-9 depression index",percents["Screen time 4-6 hours"][1], "\n"
-        "Percent at 10-14 depression index",percents["Screen time 4-6 hours"][2], "\n"
-        "Percent at 15-19 depression index",percents["Screen time 4-6 hours"][3], "\n"
-        "Percent at 20-27 depression index",percents["Screen time 4-6 hours"][4])
+    print("Screen time 6+ hours:", "\n",
+        "Percent at 0-4 depression index", percents["Screen time 6+ hours"][0], "\n"
+        "Percent at 5-9 depression index",percents["Screen time 6+ hours"][1], "\n"
+        "Percent at 10-14 depression index",percents["Screen time 6+ hours"][2], "\n"
+        "Percent at 15-19 depression index",percents["Screen time 6+ hours"][3], "\n"
+        "Percent at 20-27 depression index",percents["Screen time 6+ hours"][4])
+
+def count_screen_time_groups(dict_st):
+    return {
+        "Screen time 0-2 hours": len(dict_st["Screen time 0-2 hours"]),
+        "Screen time 3-4 hours": len(dict_st["Screen time 3-4 hours"]),
+        "Screen time 5-6 hours": len(dict_st["Screen time 5-6 hours"]),
+        "Screen time 6+ hours": len(dict_st["Screen time 6+ hours"])
+    }
 
 if __name__ == "__main__":
     main()
 
 
-    

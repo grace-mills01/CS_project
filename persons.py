@@ -31,7 +31,7 @@ class Participant:
 
 
     def parse_screen_time(raw):
-        raw_str = ",".join(raw)
+        raw_str = str(raw)
 
         raw_str = raw_str.lower()
         raw_str = raw_str.replace("hours", "")
