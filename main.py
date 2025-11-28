@@ -1,4 +1,5 @@
-import Participant
+import persons
+from persons import Participant
 
 def load_participants(filename):
     participants = []
@@ -12,11 +13,6 @@ def load_participants(filename):
             continue
         data = line.split(",")
 
-        if len(data) < 13:
-            continue
-        mood = int(data[1])
-        productivity = int(data[2])
-
         depression_values = data[3:12]
         depression_index = Participant.calculate_depression(depression_values)
 
@@ -25,8 +21,8 @@ def load_participants(filename):
 
         name = "Person_"+ str(n)
 
-        p = Participant (n, name, screen_time, depression_index, mood, participants.append(p))
-
+        p = Participant (n, name, screen_time, depression_index)
+        participants.append(p)
         n= n+1
     file.close()
     return participants
@@ -153,9 +149,8 @@ def main():
                                           "Index of 20-27 (Severe)": [],}
 
     participants = load_participants("Screen_Time_Inputs.txt")
-    participants_screenTime = sort_by_screen_time(participants)
 
-    for person in participants_screenTime:
+    for person in participants:
         screen_time = person.screen_time
 
         if screen_time > 0 and screen_time <= 2:
@@ -167,9 +162,7 @@ def main():
         elif screen_time > 6:
             dict_participants_screen_time["Screen time 6+ hours"].append(person.name)
 
-    participants_depressionIndex = sort_by_depression_score(participants)
-
-    for person in participants_depressionIndex:
+    for person in participants:
         depression_index = person.depression_index
 
         if depression_index > 0 and depression_index <= 4:
@@ -184,22 +177,27 @@ def main():
             dict_participants_depression_index["Index of 20-27 (Severe)"].append(person.name)
 
     #overall output
-    print ("We surveyed 18 people with a general form surveying for screen time, mood, and depression."
-           "Our results are displayed below with insights into why some correlations appear")
+    print ("We surveyed 18 people with a general form surveying for screen time, mood, and depression.","\n",
+    "Our results are displayed below with insights into why some correlations appear")
 
-    #screen time output
-    for i in range (len(dict_participants_screen_time)):
-        key = dict_participants_screen_time.key()
-        print (key, dict_participants_screen_time[key])
-        print("There are ", dict_participants_screen_time[key].length,
-              "number of participants with a screen time within", key)
+    for i in participants:
+        print (i)
 
-    #depression index output
-    for i in range(len(dict_participants_depression_index)):
-        key = dict_participants_depression_index.key()
-        print(key, dict_participants_depression_index[key])
-        print("There are ", dict_participants_depression_index[key].length,
-              "number of participants with a depression index within", key)
+    # st_key = dict_participants_screen_time.keys()
+    # #screen time output
+    # for n in range (len(dict_participants_screen_time)):
+    #     for i in st_key:
+    #         print (i, dict_participants_screen_time[i])
+    #         print("There are ", len(dict_participants_screen_time[i]),
+    #           "number of participants with a screen time within", i)
+    #
+    # di_key = dict_participants_depression_index.keys()
+    # #depression index output
+    # for n in range(len(dict_participants_depression_index)):
+    #     for i in di_key:
+    #         print(i, dict_participants_depression_index[i])
+    #     print("There are ", len(dict_participants_depression_index[i]),
+    #           "number of participants with a depression index within", i)
 
     #percentage output
     percents = percentages_per_screenTime(dict_participants_screen_time)
