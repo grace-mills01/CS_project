@@ -176,6 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764356454928</updated>
     </task>
+    <task id="LOCAL-00003" summary="all code works, needs test cases">
+      <option name="closed" value="true" />
+      <created>1764358525757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764358525757</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <task active="true" id="Default" summary="Default task">
       <changelist id="aec6c50a-9c12-49f4-b0bc-a659fa086a9b" name="Changes" comment="slight asthetics tweak" />
       <created>1764360954390</created>
@@ -189,6 +198,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="debugging printing persons" />
     <MESSAGE value="slight asthetics tweak" />
-    <option name="LAST_COMMIT_MESSAGE" value="slight asthetics tweak" />
+    <MESSAGE value="all code works, needs test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="all code works, needs test cases" />
   </component>
 </project>
